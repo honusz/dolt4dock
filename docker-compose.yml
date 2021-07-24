@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  dolt:
+    stdin_open: true
+    tty: true
+    image: dolt
+    hostname: dolt
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./dolt-data/:/var/lib/dolt
+    network_mode: "host"
+    ports:
+      - "3306:3306"
