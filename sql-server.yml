@@ -1,0 +1,24 @@
+log_level: trace
+
+behavior:
+  read_only: false
+  autocommit: true
+
+user:
+  name: root
+  password: quietonset
+
+listener:
+  host: 0.0.0.0
+  port: 3306
+  max_connections: 10
+  read_timeout_millis: 28800000
+  write_timeout_millis: 28800000
+
+#databases: [ 
+#  path: "/home/bdtest", 
+#  name: bdtest
+#]
+
+performance:
+  query_parallelism: null
