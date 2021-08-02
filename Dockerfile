@@ -14,15 +14,15 @@ RUN adduser -D -u 1000 dolt
 
 #RUN chown dolt /var/lib/dolt
 
-#USER dolt
+USER dolt
 #WORKDIR /var/lib/dolt
 
 RUN dolt config --global --add user.name "Barry Bernoodle" \
-    && dolt config --global --add user.email "barry@dogs.com"
+    && dolt config --global --add user.email "barry@dogs.com" \
+    && dolt init
     
 #RUN dolt init
 
 ENTRYPOINT ["dolt"]
 
-#CMD ["status"]
-CMD ["sql-server", "--config=sqlserver.yml"]
+CMD ["sql-server", "--config=sql-server.yml"]
