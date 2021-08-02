@@ -1,4 +1,4 @@
-log_level: trace
+log_level: info
 
 behavior:
   read_only: false
@@ -16,9 +16,14 @@ listener:
   write_timeout_millis: 28800000
 
 #databases: [ 
-#  path: "/home/bdtest", 
+#  path: "/home/dolt-data/bdtest/", 
 #  name: bdtest
 #]
+
+databases:
+  - name: bdtest
+    path: bdtest
+ 
 
 performance:
   query_parallelism: null

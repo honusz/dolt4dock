@@ -1,5 +1,7 @@
 # dolt4dock
 
+ docker run --rm -ti  --entrypoint /bin/bash -v $PWD/dolt-data:/home/dolt-data -w /home/dolt-data dolt
+
 c7n — Yesterday at 10:04 AM
 How does the multiple databases work? Do I need to create each subdirectory and initialize it manually for dolt to use it?
 And how does it work when sharing the database? Will each subdatabase require its own repository on dolthub?

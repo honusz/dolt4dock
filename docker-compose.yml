@@ -5,14 +5,16 @@ services:
     stdin_open: true
     tty: true
     image: dolt
-    hostname: dolt
+   # hostname: dolt
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./dolt-data/:/var/lib/docker/dolt
-    network_mode: "host"
+      - ./dolt-data/:/var/lib/dolt
+    #network_mode: "host"
     ports:
       - "3306:3306"
+    expose: 
+      - "3306"
 volumes:
   dolt-data:
