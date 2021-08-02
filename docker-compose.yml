@@ -10,7 +10,9 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./dolt-data/:/var/lib/dolt
+      - ./dolt-data/:/home/doltdata
     network_mode: "host"
     ports:
       - "3306:3306"
+volumes:
+  dolt-data:
